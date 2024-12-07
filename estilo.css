@@ -1,0 +1,226 @@
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('https://es.fi-group.com/wp-content/uploads/sites/4/2020/03/Innovaci%C3%B3nMedicina_Mesa-de-trabajo-1-1920x700.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+#sidebar {
+  display: block;
+  background-color: rgba(56, 64, 71, 0.9);
+  width: 260px;
+  padding: 20px;
+  color: #f4f4f4;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+#sidebar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #c9ccd1;
+}
+
+#sidebar img {
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 80%;
+  border-radius: 50%;
+  border: 3px solid #c9ccd1;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin: 15px 0;
+}
+
+#sidebar ul li a {
+  color: #c9ccd1;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#sidebar ul li a:hover {
+  background-color: #5c6573;
+}
+
+#sidebar-toggle {
+  background-color: #5c6573;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar-toggle:hover {
+  background-color: #384047;
+}
+
+#main-content {
+  margin-left: 260px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+}
+
+#main-content section {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(201, 204, 209, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+}
+
+#main-content h1, #main-content h2 {
+  color: #5c6573;
+  text-align: center;
+}
+
+#main-content p {
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+}
+
+#main-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#main-content ul li {
+  margin: 10px 0;
+}
+
+#main-content button {
+  background-color: #384047;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 20px auto;
+}
+
+#main-content button:hover {
+  background-color: #5c6573;
+}
+
+#main-content img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: block;
+  object-fit: cover;
+}
+
+#foco {
+  width: 150px;
+  height: 300px;
+  margin: 20px center;
+  display: block;
+  border-radius: 10px center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#botones {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+      transform: translateX(-100%);
+  }
+
+  #sidebar.open {
+      transform: translateX(0);
+  }
+
+  #main-content {
+      margin-left: 0;
+  }
+
+  #sidebar-toggle {
+      display: block;
+  }
+}
+
+#description {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 900px;
+  backdrop-filter: blur(10px);
+}
+
+#description header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#description h1 {
+  font-size: 2.5rem;
+  color: #5c6573;
+  margin-bottom: 20px;
+}
+
+#description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
